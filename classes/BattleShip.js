@@ -1,3 +1,5 @@
+//A class to create the battleship objects by asking the player to input the
+//starting slot, number of slots and orientation of the ship
 module.exports = class BattleShip {
   constructor(startSlot, numberOfSlots, orientation) {
     this.startSlot = startSlot;
@@ -6,6 +8,7 @@ module.exports = class BattleShip {
     this.sequenceOfSlots = this.sequence();
   }
 
+  //Method to create the sequence of slots of the ship based on the ship properties
   sequence() {
     const alphabet = 'abcdefghijklmnopqrstuvwxyz';
     const letter = this.startSlot[0];
