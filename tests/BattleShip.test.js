@@ -3,7 +3,6 @@ const BattleShip = require('../classes/BattleShip');
 test('Vertical Ship blocks should be in sequence numerically ', () => {
   const battleShipVertical = new BattleShip();
   battleShipVertical.setOrientation = 'v';
-  battleShipVertical.setNumberOfSlots = 3;
   battleShipVertical.setStartSlot = 'b3';
   console.log('dfsdfsdf', battleShipVertical);
 
@@ -11,6 +10,6 @@ test('Vertical Ship blocks should be in sequence numerically ', () => {
 });
 
 test('Ship blocks should be in sequence  alphabetically', () => {
-  const battleShipHorizontal = new BattleShip('b3', 3, 'h');
+  const battleShipHorizontal = new BattleShip('b3', 'h');
   expect(battleShipHorizontal.sequenceOfSlots).toEqual('b3c3d3');
 });

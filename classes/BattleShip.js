@@ -1,9 +1,9 @@
 //A class to create the battleship objects by asking the player to input the
 //starting slot, number of slots and orientation of the ship
 module.exports = class BattleShip {
-  constructor(startSlot = 'a1', numberOfSlots = 1, orientation = 'V') {
+  constructor(startSlot = 'a1', orientation = 'V') {
     this.startSlot = startSlot;
-    this.numberOfSlots = numberOfSlots;
+    this.numberOfSlots = 3;
     this.orientation = orientation.toLowerCase();
   }
 
