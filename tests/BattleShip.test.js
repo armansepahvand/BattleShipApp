@@ -18,10 +18,10 @@ test('Horizontal battleship slots should match the input slots ', () => {
 
 test('Horizontal battleship should be inside the board the board', () => {
   const battleShipHorizontal = new BattleShip('b3c3d3');
-  expect(battleShipHorizontal.shipslots).toEqual(['b3', 'c3', 'd3']);
+  expect(battleShipHorizontal.shipSlots).toEqual(['b3', 'c3', 'd3']);
 });
 
 test('Vertical battleship should be inside the board the board', () => {
   const battleShipHorizontal = new BattleShip('b3b4b5');
-  expect(battleShipHorizontal.shipslots).toEqual(['b3', 'b4', 'b5']);
+  expect(battleShipHorizontal.shipSlots).toEqual(['b3', 'b4', 'b5']);
 });
