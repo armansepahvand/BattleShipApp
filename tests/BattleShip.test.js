@@ -1,15 +1,27 @@
 const BattleShip = require('../classes/BattleShip');
+const BattleShipBoard = require('../classes/BattleShipBoard');
 
-test('Vertical Ship blocks should be in sequence numerically ', () => {
-  const battleShipVertical = new BattleShip();
-  battleShipVertical.setOrientation = 'v';
-  battleShipVertical.setStartSlot = 'b3';
-  console.log('dfsdfsdf', battleShipVertical);
-
-  expect(battleShipVertical.sequenceOfSlots).toEqual(['b3', 'b4', 'b5']);
+test('Battleship length should be 3 ', () => {
+  const battleShip = new BattleShip('a1a2a3');
+  expect(battleShip.length).toEqual(3);
 });
 
-test('Ship blocks should be in sequence  alphabetically', () => {
-  const battleShipHorizontal = new BattleShip('b3', 'h');
-  expect(battleShipHorizontal.sequenceOfSlots).toEqual(['b3', 'c3', 'd3']);
+test('Vertical battleship slots should match the input slots ', () => {
+  const battleShip = new BattleShip('a1b1c1');
+  expect(battleShip.length).toEqual(3);
+});
+
+test('Horizontal battleship slots should match the input slots ', () => {
+  const battleShip = new BattleShip('a1a2a3');
+  expect(battleShip.length).toEqual(3);
+});
+
+test('Horizontal battleship should be inside the board the board', () => {
+  const battleShipHorizontal = new BattleShip('b3c3d3');
+  expect(battleShipHorizontal.shipslots).toEqual(['b3', 'c3', 'd3']);
+});
+
+test('Vertical battleship should be inside the board the board', () => {
+  const battleShipHorizontal = new BattleShip('b3b4b5');
+  expect(battleShipHorizontal.shipslots).toEqual(['b3', 'b4', 'b5']);
 });
