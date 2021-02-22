@@ -31,6 +31,7 @@ module.exports = class BattleShipBoard {
       let testHeight = slot[1];
       if (
         testHeight > this.height ||
+        testHeight <= 0 ||
         testWidthIndex > widthIndex ||
         testWidthIndex < 0
       ) {
