@@ -1,5 +1,4 @@
 const BattleShip = require('../classes/BattleShip');
-const BattleShipBoard = require('../classes/BattleShipBoard');
 
 test('Battleship length should be 3 ', () => {
   const battleShip = new BattleShip('a1a2a3');
