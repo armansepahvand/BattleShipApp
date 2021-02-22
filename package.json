@@ -2,13 +2,18 @@
   "name": "battleshipapp",
   "version": "1.0.0",
   "description": "Battleship console game",
-  "main": "index.js",
+  "main": "commands.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "start": "node commands.js s"
   },
   "author": "Arman Sepah Vand",
   "license": "ISC",
   "devDependencies": {
     "jest": "^26.6.3"
+  },
+  "dependencies": {
+    "commander": "^7.1.0",
+    "inquirer": "^7.3.3"
   }
 }
