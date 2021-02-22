@@ -56,13 +56,38 @@ module.exports = {
         type: 'input',
         name: 'player1Fire',
         message: `Player1_ fire at a slot on player2's board:`,
+        validate: (value) => {
+          let rangePass = gameBoard.isShipInRange(value);
+          let lengthPass = value.length;
+          if (lengthPass != 2) {
+            return 'please select exactly 2 characters for your shot, hit backspace to change your answer';
+          }
+
+          if (!rangePass) {
+            return 'please place your ship in the range of the board(width:a-h, height:1-8), hit backspace to change your answer';
+          }
+
+          return true;
+        },
       },
       {
         type: 'input',
         name: 'player2Fire',
         message: `Player2_ fire at a slot on player1's board:`,
+        validate: (value) => {
+          let rangePass = gameBoard.isShipInRange(value);
+          let lengthPass = value.length;
+          if (lengthPass != 2) {
+            return 'please select exactly 2 characters for your shot, hit backspace to change your answer';
+          }
+
+          if (!rangePass) {
+            return 'please place your ship in the range of the board(width:a-h, height:1-8), hit backspace to change your answer';
+          }
+
+          return true;
+        },
       },
     ],
   },
-  alphabet: 'abcdefghijklmnopqrstuvwxyz',
 };
